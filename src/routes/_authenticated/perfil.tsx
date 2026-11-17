@@ -108,9 +108,7 @@ function Perfil() {
       setCurrent(""); setNext(""); setConfirm("");
     } catch (err) {
       const m = errMsg(err);
-      if (m.toLowerCase().includes("current password")) toast.error("Sua senha atual está incorreta.");
-      else if (m.toLowerCase().includes("different from the old")) toast.error("Escolha uma senha diferente da atual.");
-      else toast.error(m);
+      toast.error(m);
     } finally {
       setLoading(false);
     }

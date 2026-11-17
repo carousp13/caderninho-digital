@@ -61,7 +61,7 @@ function AuthPage() {
       }
     } catch (err) {
       const m = errMsg(err);
-      toast.error(m.includes("Invalid login") ? "E-mail ou senha incorretos." : m);
+      toast.error(m);
     } finally {
       setLoading(false);
     }
@@ -79,7 +79,7 @@ function AuthPage() {
       toast.success("Se esse e-mail estiver cadastrado, você receberá um link para criar uma nova senha.");
     } catch (err) {
       const m = errMsg(err);
-      toast.error(m.toLowerCase().includes("rate limit") ? "Muitas solicitações seguidas. Aguarde alguns minutos e tente de novo." : m);
+      toast.error(m);
     } finally {
       setSending(false);
     }

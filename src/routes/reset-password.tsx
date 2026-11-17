@@ -60,7 +60,7 @@ function ResetPassword() {
       navigate({ to: "/painel", replace: true });
     } catch (err) {
       const m = errMsg(err);
-      if (m.toLowerCase().includes("current password")) {
+      if (m === "Sua senha atual está incorreta.") {
         toast.error("Este link não vale mais para trocar a senha. Peça um novo em \"Esqueci minha senha\".");
       } else {
         toast.error(m);
