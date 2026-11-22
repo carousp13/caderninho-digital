@@ -121,6 +121,11 @@
     font-family: var(--font-sans);
   }
   h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; }
+
+  /* Oculta o selo "Edit with Lovable" no app publicado. */
+  #lovable-badge {
+    display: none !important;
+  }
 }
 
 @utility bg-hero { background-image: var(--gradient-hero); }
